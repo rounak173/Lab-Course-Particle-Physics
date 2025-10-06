@@ -1,0 +1,108 @@
+\documentclass[12pt,openany]{mitthesis}
+\setcounter{tocdepth}{3}% Include \subsubsection in ToC
+\setcounter{secnumdepth}{3}% Number \subsubsection
+\usepackage{lgrind}
+%% These have been added at the request of the MIT Libraries, because
+%% some PDF conversions mess up the ligatures.  -LB, 1/22/2014
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{graphicx}
+%---------------------------------------------------------- My package ----------------------------------------------------------------&
+\usepackage{amssymb,amsmath}
+\usepackage[margin=1in]{geometry}
+\DeclareMathOperator{\Tr}{Tr}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{physics} % สำหรับพิมพ์เครื่องหมายและสัญลักษณ์ในฟิสิกส์
+\usepackage{siunitx} % สำหรับพิมพ์ปริมาณในหน่วย SI
+\usepackage{bbold}
+\usepackage{indentfirst}
+\usepackage{ upgreek }
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{qcircuit}
+\usepackage[makeroom]{cancel}
+\usepackage{subcaption}
+\usepackage{helvet} 
+\usepackage{microtype}
+
+\graphicspath {{figure/}}
+%------------------------------------------------------------------------------------------------------------------------------------------------------%
+\pagestyle{plain}
+
+%% This bit allows you to either specify only the files which you wish to
+%% process, or `all' to process all files which you \include.
+%% Krishna Sethuraman (1990).
+
+% \typein[\files]{Enter file names to process, (chap1,chap2 ...), or 'all' to process all files:}
+% \def\all{all}
+% \ifx\files\all \typeout{Including all files.} \else \typeout{Including only \files.} \includeonly{\files} \fi
+
+%%%% CODE PREVIEW %%%
+\usepackage{listings}
+
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{float}
+%New colors defined below
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+%Code listing style named "mystyle"
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour}, commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,         
+  breaklines=true,                 
+  captionpos=b,                    
+  keepspaces=true,                 
+  numbers=left,                    
+  numbersep=5pt,                  
+  showspaces=false,                
+  showstringspaces=false,
+  showtabs=false,                  
+  tabsize=2
+}
+
+%"mystyle" code listing set
+\lstset{style=mystyle}
+
+%%%%
+\usepackage{hyperref}
+\renewcommand{\bibname}{Literatures}
+\usepackage[most]{tcolorbox}
+
+\begin{document}
+
+\setlength{\parindent}{0pt} % This will set no global indentation.
+\pagenumbering{roman}
+%\include{cover}
+%\include{abstract.tex}
+
+\include{contents}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\include{introduction}
+\include{chap2}
+\include{chap3}
+% \include{chap4}
+% \include{Discussion}
+\include{conclusion}
+
+\appendix
+% \include{appa}
+% \include{appb}
+%\include{biblio}
+%\bibliographystyle{abbrv}
+\bibliographystyle{plain}  
+\bibliography{references}
+\end{document}
+
